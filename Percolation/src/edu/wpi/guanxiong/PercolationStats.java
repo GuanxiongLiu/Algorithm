@@ -12,13 +12,18 @@ public class PercolationStats
 	
 	public PercolationStats(int N, int T)					// perform T independent computational experiments on an N-by-N grid
 	{
+		if (N<=0 || T<=0)
+		{
+			throw new IllegalArgumentException();
+		}
+		
 		mean = 0;
 		stddev = 0;
 		confidenceLo = 0;
 		confidenceHi = 0;
 		
 		double [] x = new double [T];
-		int counter = 0;
+		double counter = 0;
 		for (int t=0; t<T; t++)
 		{
 			Percolation test = new Percolation(N);
