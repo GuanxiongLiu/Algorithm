@@ -1,0 +1,90 @@
+package edu.wpi.guanxiong;
+
+import edu.princeton.cs.algs4.UF;
+
+public class Percolation 
+{
+	private UF uf_inst;
+	private boolean [] grid;
+	private int N;
+	
+	public Percolation(int N)				// create N-by-N grid, with all sites blocked
+	{
+		this.N = N;
+		uf_inst = new UF (N*N+2);
+		grid = new boolean [N*N];
+		
+		for (int i=0; i<N; i++)
+		{
+			uf_inst.union(i, N*N);
+			uf_inst.union(N*(N-1)+i, N*N+1);
+		}
+	}              
+	public void open(int i, int j)			// open site (row i, column j) if it is not already
+	{
+		try
+		{
+			if (!this.isOpen(i, j))
+			{
+				grid[N*(i-1)+j-1] = true;
+				
+				if (this.isOpen(i+1, j))
+				{
+					uf_inst.union(N*(i-1)+j-1, N*i+j-1);
+				}
+				if (this.isOpen(i-1, j))
+				{
+					uf_inst.union(N*(i-1)+j-1, N*i+j);
+				}
+				if (this.isOpen(i, j+1))
+				{
+					uf_inst.union(N*(i-1)+j-1, N*(i-1)+j);
+				}
+				if (this.isOpen(i, j-1))
+				{
+					uf_inst.union(N*(i-1)+j-1, N*(i-1)+j);
+				}
+			}
+		} 
+		catch (java.lang.IndexOutOfBoundsException e)
+		{
+			System.out.println("i or j is out of range");
+		}
+	}        
+	public boolean isOpen(int i, int j)		// is site (row i, column j) open?
+	{
+		try
+		{
+			return grid[N*(i-1)+j-1] == true;
+		} 
+		catch (java.lang.IndexOutOfBoundsException e)
+		{
+			System.out.println("i or j is out of range");
+			return false;
+		}
+	}    
+	public boolean isFull(int i, int j)		// is site (row i, column j) full?
+	{
+		try
+		{
+			return uf_inst.connected(N*(i-1)+j-1, N*N);
+		} 
+		catch (java.lang.IndexOutOfBoundsException e)
+		{
+			System.out.println("i or j is out of range");
+			return false;
+		}
+	}    
+	public boolean percolates()				// does the system percolate?
+	{
+		try
+		{
+			return uf_inst.connected(N*N+1, N*N);
+		} 
+		catch (java.lang.IndexOutOfBoundsException e)
+		{
+			System.out.println("i or j is out of range");
+			return false;
+		}
+	}            
+}

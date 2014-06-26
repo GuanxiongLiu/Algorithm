@@ -1,0 +1,39 @@
+package edu.wpi.guanxiong;
+
+public class Percolation 
+{
+	private boolean [] grid;
+	private int N;
+	
+	public Percolation(int N)				// create N-by-N grid, with all sites blocked
+	{
+		this.N = N;
+		grid = new boolean [N*N];
+	}              
+	public void open(int i, int j)			// open site (row i, column j) if it is not already
+	{
+		try
+		{
+			if (grid[N*(i-1)+j-1] == false)
+			{
+				grid[N*(i-1)+j-1] = true;
+			}
+		} 
+		catch (java.lang.IndexOutOfBoundsException e)
+		{
+			System.out.println("i or j is out of range");
+		}
+	}        
+	public boolean isOpen(int i, int j)		// is site (row i, column j) open?
+	{
+		return grid[N*(i-1)+j-1] == true;
+	}    
+	public boolean isFull(int i, int j)		// is site (row i, column j) full?
+	{
+		return false;
+	}    
+	public boolean percolates()				// does the system percolate?
+	{
+		return false;
+	}            
+}

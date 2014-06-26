@@ -1,0 +1,42 @@
+package edu.wpi.guanxiong;
+
+import edu.princeton.cs.algs4.UF;
+
+public class Percolation 
+{
+	private UF uf_inst;
+	private boolean [] grid;
+	private int N;
+	
+	public Percolation(int N)				// create N-by-N grid, with all sites blocked
+	{
+		N = N;
+		uf_inst = new UF (N);
+		grid = new boolean [N*N];
+	}              
+	public void open(int i, int j)			// open site (row i, column j) if it is not already
+	{
+		try
+		{
+			if (grid[])
+			{
+				
+			}
+		} catch (java.lang.IndexOutOfBoundsException e)
+		{
+			System.out.println("i or j is out of range");
+		}
+	}        
+	public boolean isOpen(int i, int j)		// is site (row i, column j) open?
+	{
+		return false;
+	}    
+	public boolean isFull(int i, int j)		// is site (row i, column j) full?
+	{
+		return false;
+	}    
+	public boolean percolates()				// does the system percolate?
+	{
+		return false;
+	}            
+}
