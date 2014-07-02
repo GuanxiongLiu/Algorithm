@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.UF"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="edu.wpi.guanxiong.PercolationStats"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.introcs.StdRandom"/>
+<fullyQualifiedTypeName name="edu.wpi.guanxiong.Percolation"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.introcs.StdStats"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.WeightedQuickUnionUF"/>
+</qualifiedTypeNameHistroy>
