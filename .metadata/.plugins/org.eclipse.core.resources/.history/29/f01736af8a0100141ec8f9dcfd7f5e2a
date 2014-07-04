@@ -1,0 +1,103 @@
+package edu.wpi.guanxiong;
+
+import java.util.Iterator;
+
+public class Deque<Item> implements Iterable<Item>
+{
+	class LinkNode<Item>
+	{
+		private Item data;
+		private LinkNode<Item> next;
+		private LinkNode<Item> previous;
+	}
+	
+	private LinkNode<Item> first;
+	private LinkNode<Item> end;
+	private int size;
+	
+	
+	
+	public Deque()// construct an empty deque
+	{
+		this.first.next 	= null;
+		this.end.previous   = null;
+		this.size  			= 0;
+	} 
+
+	public boolean isEmpty()// is the deque empty?
+	{
+		return this.first.next == null;
+	} 
+
+	public int size()// return the number of items on the deque
+	{
+		return this.size;
+	} 
+
+	public void addFirst(Item item)// insert the item at the front
+	{
+		LinkNode<Item> inNode = new LinkNode<Item>();
+		inNode.data = item;
+		inNode.next = this.first;
+		this.first.next = inNode;
+	} 
+
+	public void addLast(Item item)// insert the item at the end
+	{
+		LinkNode<Item> inNode = new LinkNode<Item>();
+		this.end.next.next = inNode;
+		this.end.next = inNode;
+	} 
+
+	public Item removeFirst()// delete and return the item at the front
+	{
+		LinkNode<Item> outNode = new LinkNode<Item>();
+		outNode = this.first.next;
+		this.first.next = this.first.next.next;
+		outNode.next = null;
+		return outNode.data;
+	} 
+
+	public Item removeLast()// delete and return the item at the end
+	{
+		LinkNode<Item> outNode = new LinkNode<Item>();
+		outNode = this.end.next;
+		
+		return null;
+	} 
+
+	public Iterator<Item> iterator()// return an iterator over items in order from front to end
+	{
+		return new ListIterator();
+	}
+	
+	class ListIterator implements Iterator<Item>
+	{
+
+		@Override
+		public boolean hasNext()
+		{
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public Item next()
+		{
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public void remove()
+		{
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+
+	public static void main(String[] args)// unit testing
+	{
+	}
+}

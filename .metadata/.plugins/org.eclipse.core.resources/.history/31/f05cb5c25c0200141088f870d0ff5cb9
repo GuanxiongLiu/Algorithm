@@ -1,0 +1,15 @@
+package edu.wpi.guanxiong;
+
+import edu.princeton.cs.introcs.StdIn;
+
+public class Subset
+{
+	public static void main(String[] args)
+	{
+		for (String i : args)
+		{
+			System.out.println(i);
+		}
+		System.out.println(StdIn.readLine());
+	}
+}

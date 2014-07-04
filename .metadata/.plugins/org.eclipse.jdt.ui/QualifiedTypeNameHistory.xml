@@ -3,9 +3,18 @@
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.UF"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="edu.wpi.guanxiong.PercolationStats"/>
-<fullyQualifiedTypeName name="edu.princeton.cs.introcs.StdRandom"/>
 <fullyQualifiedTypeName name="edu.wpi.guanxiong.Percolation"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.introcs.StdStats"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.WeightedQuickUnionUF"/>
+<fullyQualifiedTypeName name="edu.wpi.guanxiong.Deque.ListIterator"/>
+<fullyQualifiedTypeName name="edu.wpi.guanxiong.Deque"/>
+<fullyQualifiedTypeName name="edu.wpi.guanxiong.Deque.LinkNode"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.introcs.StdRandom"/>
+<fullyQualifiedTypeName name="edu.wpi.guanxiong.RandomizedQueue.ListIterator"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.introcs.StdIn"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

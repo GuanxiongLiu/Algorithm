@@ -1,0 +1,18 @@
+package edu.wpi.guanxiong;
+
+import edu.princeton.cs.introcs.StdIn;
+
+public class Subset
+{
+	public static void main(String[] args)
+	{
+		int k = Integer.parseInt(args[0]);
+		String[] NString = StdIn.readAllStrings();
+		
+		System.out.println(k);
+		for (String i : NString)
+		{
+			System.out.println(i);
+		}
+	}
+}
