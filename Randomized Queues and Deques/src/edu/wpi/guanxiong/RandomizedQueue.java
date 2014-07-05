@@ -43,12 +43,12 @@ public class RandomizedQueue<Item> implements Iterable<Item>
 	{
 		Item[] NewData = (Item[]) new Object[this.capacity];
 		int pos = -1;
-		for (int i=0; i<this.capacity; i++)
+		for (int i=0; i<=this.end; i++)
 		{
 			if (this.data[i] != null)
 			{
-				NewData[pos] = this.data[i];
 				pos++;
+				NewData[pos] = this.data[i];
 			}
 		}
 		this.data = NewData;
@@ -80,17 +80,16 @@ public class RandomizedQueue<Item> implements Iterable<Item>
 			throw new NullPointerException();
 		}
 		
-		this.end++;
-		
 		if (this.size == this.capacity)
 		{
 			this.AddCapacity();
 		}
-		else if (this.end == this.capacity)
+		else if (this.end == this.capacity-1)
 		{
 			this.ReduceBlank();
 		}
 		
+		this.end++;
 		this.data [this.end] = item;
 		this.size++;
 	}
@@ -144,27 +143,50 @@ public class RandomizedQueue<Item> implements Iterable<Item>
 
 	private class ListIterator implements Iterator<Item>
 	{
-		private int current = 0;
+		private int current;
+		private int SendOut = 0;
+
+		public ListIterator()
+		{
+			if (isEmpty())
+			{
+				this.current = 0;
+			}
+			else
+			{
+				this.current = StdRandom.uniform(end+1);
+			}
+			
+		}
 
 		@Override
 		public boolean hasNext()
 		{
 			// TODO Auto-generated method stub
-			return (size>0 && current<=end);
+			return (size>0 && SendOut<size);
 		}
 
 		@Override
 		public Item next()
 		{
-			if (size==0 || current>end)
+			if (!this.hasNext())
 			{
 				throw new java.util.NoSuchElementException();
 			}
 			
+			if (current >= capacity)
+			{
+				current = current - capacity;
+			}
 			while (data[current] == null)
 			{
 				current++;
+				if (current >= capacity)
+				{
+					current = current - capacity;
+				}
 			}
+			SendOut++;
 			return data[current++];
 		}
 

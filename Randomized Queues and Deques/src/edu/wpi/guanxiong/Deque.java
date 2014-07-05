@@ -11,8 +11,8 @@ public class Deque<Item> implements Iterable<Item>
 		private LinkNode previous;
 	}
 	
-	private LinkNode first;
-	private LinkNode end;
+	private LinkNode first = new LinkNode();
+	private LinkNode end   = new LinkNode();
 	private int size;
 	
 	
@@ -125,7 +125,7 @@ public class Deque<Item> implements Iterable<Item>
 		public boolean hasNext()
 		{
 			// TODO Auto-generated method stub
-			return current != null;
+			return current != end;
 		}
 
 		@Override
