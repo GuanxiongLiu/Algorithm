@@ -1,0 +1,16 @@
+package edu.wpi.guanxiong;
+
+import java.util.Scanner;
+
+import edu.princeton.cs.introcs.StdArrayIO;
+import edu.princeton.cs.introcs.StdIn;
+
+public class Brute
+{
+	public static void main(String[] args)
+	{
+		String FileName = StdIn.readLine();
+		
+		Scanner scan = new Scanner(FileName);
+	}
+}

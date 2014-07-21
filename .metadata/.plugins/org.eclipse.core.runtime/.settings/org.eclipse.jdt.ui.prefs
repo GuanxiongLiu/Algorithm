@@ -1,6 +1,6 @@
 content_assist_disabled_computers=org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000
 content_assist_favorite_static_members=
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="edu.wpi.guanxiong.PercolationStats"><rhs name\="edu.wpi.guanxiong.PercolationStats"/></lhs><lhs name\="edu.wpi.guanxiong.Percolation"><rhs name\="edu.wpi.guanxiong.Percolation"/></lhs><lhs name\="edu.wpi.guanxiong.Deque$LinkNode"><rhs name\="edu.wpi.guanxiong.Deque$LinkNode"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.String"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="edu.wpi.guanxiong.PercolationStats"><rhs name\="edu.wpi.guanxiong.PercolationStats"/></lhs><lhs name\="edu.wpi.guanxiong.Percolation"><rhs name\="edu.wpi.guanxiong.Percolation"/></lhs><lhs name\="edu.wpi.guanxiong.Deque$LinkNode"><rhs name\="edu.wpi.guanxiong.Deque$LinkNode"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.String"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="edu.wpi.guanxiong.RandomizedQueue"/></lhs><lhs name\="edu.wpi.guanxiong.RandomizedQueue"><rhs name\="edu.wpi.guanxiong.RandomizedQueue"/></lhs></history>
 content_assist_number_of_computers=21
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
@@ -17,7 +17,7 @@ org.eclipse.jdt.ui.javadoclocations.migrated=true
 org.eclipse.jdt.ui.overrideannotation=true
 org.eclipse.jdt.ui.text.code_templates_migrated=true
 org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
-org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="java" deleted\="false" description\="" enabled\="true" name\="Comment">/*&\#13;\r\n\t${line_selection}&\#13;\r\n*/</template></templates>
 org.eclipse.jdt.ui.text.templates_migrated=true
 org.eclipse.jface.textfont=1|Consolas|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 proposalOrderMigrated=true

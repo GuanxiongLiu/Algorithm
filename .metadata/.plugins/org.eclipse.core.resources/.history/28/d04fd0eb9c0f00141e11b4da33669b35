@@ -1,0 +1,5 @@
+package edu.wpi.guanxiong;
+
+public class Brute {
+	   public static void main(String[] args){}
+	}
