@@ -1,0 +1,84 @@
+package edu.wpi.guanxiong;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Fast
+{
+	public static void main(String[] args)
+	{
+		String FileName = args[0];
+
+		Scanner scan = null;
+		try
+		{
+			scan = new Scanner(new File(FileName));
+		} catch (FileNotFoundException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		int size = 0;
+		if (scan.hasNext())
+		{
+			size = Integer.parseInt(scan.nextLine());
+			Point Points[] = new Point[size];
+
+			for (int i = 0; i < size; i++)
+			{
+				Points[i] = new Point(scan.nextInt(), scan.nextInt());
+			}
+
+			// read in the input file
+
+			for (int i=0; i<size; i++)
+			{
+				double[] slop = new double[size-i-1];
+				for (int j=i+1; j<size; j++)
+				{
+					slop[j-i-1] = Points[i].slopeTo(Points[j]);
+				}
+			}
+			// find the points in line
+		}
+	}
+
+	private void FastSort(double[] in, int low, int high)
+	{
+		int mid = low;
+		int head = low;
+		int tail = high;
+
+		while (head <= tail)
+		{
+			if (in[head].compareTo(in[mid]) == 0)
+			{
+				head++;
+			}
+			else if (in[head].compareTo(in[mid]) < 0)
+			{
+				Point temp = in[head];
+				in[head] = in[mid];
+				in[mid] = temp;
+				
+				head++;
+				mid++;
+			}
+			else if (in[head].compareTo(in[mid]) > 0)
+			{
+				Point temp = in[head];
+				in[head] = in[tail];
+				in[tail] = temp;
+				
+				tail--;
+			}
+		}
+		
+		Fast.this.FastSort(in, low, mid);
+		//left part of unsorted
+		Fast.this.FastSort(in, head, high);
+		//right part of unsorted
+	}
+}
