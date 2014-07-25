@@ -88,13 +88,9 @@ public class Point implements Comparable<Point>
 		{
 			return 0;
 		}
-		else if (x0 == x1)
-		{
-			return 1.0/0.0;
-		}
 		else
 		{
-			return (y1-y0)/(x1-x0);
+			return (y0-y1)/(x0-x1);
 		}
 		/* YOUR CODE HERE */
 	}
@@ -138,8 +134,8 @@ public class Point implements Comparable<Point>
 	public static void main(String[] args)
 	{
 		/* YOUR CODE HERE */
-		Point p = new Point(380, 52);
-		Point q = new Point(380, 252);
+		Point p = new Point(116, 52);
+		Point q = new Point(116, 52);
 		System.out.println(p.slopeTo(q));
 	}
 }

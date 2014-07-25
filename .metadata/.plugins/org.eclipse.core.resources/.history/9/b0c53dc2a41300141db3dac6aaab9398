@@ -1,9 +1,7 @@
 package edu.wpi.guanxiong;
 
 import java.util.Arrays;
-
 import edu.princeton.cs.introcs.In;
-import edu.princeton.cs.introcs.StdDraw;
 
 public class Fast
 {
@@ -22,9 +20,12 @@ public class Fast
 
 		// read in the input file
 
-		for (int i = 0; i < size-3; i++)
+		for (int i = 0; i < size; i++)
 		{
-			new Fast().FastSort(Points, Points[i], i+1, size-1);
+			Point temp = Points[i];
+			Points[i] = Points[0];
+			Points[0] = temp;
+			new Fast().FastSort(Points, Points[0], 1, size - 1);
 		}
 		// find the points in line
 	}
@@ -58,7 +59,7 @@ public class Fast
 			}
 		}
 
-		if (head - mid >= 3)
+		if (head - mid > 3)
 		{
 			Point[] Result = new Point[head - mid+1];
 			for (int i = mid; i < head; i++)
@@ -67,18 +68,11 @@ public class Fast
 			}
 			Result[head-mid] = origin;
 			Arrays.sort(Result);
-			
-			// rescale coordinates and turn on animation mode
-			StdDraw.setXscale(0, 32768);
-			StdDraw.setYscale(0, 32768);
-			StdDraw.setPenRadius(0.01); // make the points a bit larger
-			Result[0].drawTo(Result[head-mid]);
-			
 			for (int i = 0; i < head - mid; i++)
 			{
 				System.out.print(Result[i] + "->");
 			}
-			System.out.println(Result[head - mid]);
+			System.out.println(Result[head - mid - 1]);
 		}
 
 		if (mid == low && tail == high)

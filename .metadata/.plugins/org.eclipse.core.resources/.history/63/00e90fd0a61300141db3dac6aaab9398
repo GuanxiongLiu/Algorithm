@@ -68,11 +68,11 @@ public class Fast
 			Result[head-mid] = origin;
 			Arrays.sort(Result);
 			
-			// rescale coordinates and turn on animation mode
-			StdDraw.setXscale(0, 32768);
-			StdDraw.setYscale(0, 32768);
-			StdDraw.setPenRadius(0.01); // make the points a bit larger
 			Result[0].drawTo(Result[head-mid]);
+			// display to screen all at once
+			StdDraw.show(0);
+			// reset the pen radius
+			StdDraw.setPenRadius();
 			
 			for (int i = 0; i < head - mid; i++)
 			{

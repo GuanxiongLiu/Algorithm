@@ -71,6 +71,7 @@ public class Fast
 			// rescale coordinates and turn on animation mode
 			StdDraw.setXscale(0, 32768);
 			StdDraw.setYscale(0, 32768);
+			StdDraw.show(0);
 			StdDraw.setPenRadius(0.01); // make the points a bit larger
 			Result[0].drawTo(Result[head-mid]);
 			
