@@ -1,6 +1,10 @@
 package edu.wpi.guanxiong;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Arrays;
+import java.util.Scanner;
+
 import edu.princeton.cs.introcs.In;
 
 public class Fast
@@ -15,7 +19,7 @@ public class Fast
 
 		for (int i = 0; i < size; i++)
 		{
-			Points[i] = new Point(in.readInt(), in.readInt());
+			Points[i] = new Point(scan.nextInt(), scan.nextInt());
 		}
 
 		// read in the input file

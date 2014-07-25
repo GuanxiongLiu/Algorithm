@@ -19,4 +19,6 @@
 <fullyQualifiedTypeName name="edu.wpi.guanxiong.RandomizedQueue"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.introcs.StdIn"/>
 <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="edu.wpi.guanxiong.Fast"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
